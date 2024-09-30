@@ -4,7 +4,7 @@ import java.time.temporal.ChronoUnit;
 public class FlightBookingSystem {
 
     public static void main(String[] args) {
-        // TODO 1: Flight Booking Date (LocalDate)
+
         LocalDate bookingDate = LocalDate.now();
         LocalDate flightDate = LocalDate.of(2024, 12, 15);
         long daysUntilFlight = ChronoUnit.DAYS.between(bookingDate, flightDate);
@@ -13,7 +13,7 @@ public class FlightBookingSystem {
         System.out.println("Days Until the Flight: " + daysUntilFlight);
         System.out.println();
 
-        // TODO 2: Flight Time (LocalTime)
+
         LocalTime departureTime = LocalTime.of(14, 30);
         LocalTime arrivalTime = departureTime.plusHours(5).plusMinutes(45);
         Duration flightDuration = Duration.between(departureTime, arrivalTime);
@@ -21,7 +21,7 @@ public class FlightBookingSystem {
         System.out.println("Flight lasted: " + flightDuration);
         System.out.println();
 
-        // TODO 3: Full Flight Schedule (LocalDateTime)
+
         LocalDateTime departureDateTime = LocalDateTime.of(flightDate, departureTime);
         LocalDateTime arrivalDateTime = departureDateTime.plus(flightDuration);
         System.out.println("Departure at: " + departureDateTime);
